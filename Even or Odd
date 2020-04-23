@@ -1,0 +1,8 @@
+number = int(input("Give a number: "))
+
+if number % 2 == 1:
+    answer = "odd"
+elif number % 2 == 0:
+    answer = "even"    
+
+print(f"The number is {answer}")
