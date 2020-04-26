@@ -1,0 +1,34 @@
+#Roots of a Quadratic Function
+
+import math
+
+a = float(input("Enter the a Value: "))
+b = float(input("Enter the b Value: "))
+c = float(input("Enter the c Value: "))
+_ = 1
+
+while _ == 1:
+    try:
+        discriminant = math.sqrt(b ** 2 - 4 * a * c)
+
+    except ValueError:
+        Roots = ("This quadratic has zero real roots")
+        print(Roots)
+        discriminant = -1
+    _ = 2
+
+    if discriminant == 0:
+        Roots = ("This quadratic has one real root.")
+        Root_value_1 = ((0 - b) / 2 * a)
+
+        print(Roots)
+        print(f"The value of the Root is {Root_value_1}")
+
+    if discriminant > 0:
+        Roots = ("This quadratic has two real roots")
+        Root_value_1 = (((0 - b) + discriminant) / 2 * a)
+        Root_value_2 = (((0 - b) - discriminant) / 2 * a)
+
+        print(Roots)
+        print(f"The value of the first Root is {Root_value_1}")
+        print(f"The value of the second Root is {Root_value_2}")
